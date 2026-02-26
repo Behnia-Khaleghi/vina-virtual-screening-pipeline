@@ -35,6 +35,6 @@ set depth_cue, 0
 set ray_shadows, off
 
 ray 2400,1800
-png 04_analysis/F_pos006_binding.png, dpi=300
+png figures/F_pos006_binding.png, dpi=300
 
 quit
