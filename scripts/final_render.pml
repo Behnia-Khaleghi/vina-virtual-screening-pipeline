@@ -16,16 +16,17 @@ set antialias, 2
 # Load receptor
 load inputs/receptor.pdbqt, rec
 hide everything, rec
-show cartoon, rec
-color gray85, rec
-set cartoon_transparency, 0.75
+show cartoon, rec and not pocket
+set cartoon_transparency, 0.85
+color gray90, rec
 
 # Load ligand
 load inputs/F_pos006_out.pdbqt, lig
 hide everything, lig
 show sticks, lig
 color orange, lig
-set stick_radius, 0.28, lig
+set stick_radius, 0.32, lig
+set specular, 0.35, lig
 
 # Pocket residues
 select pocket, byres (rec within 4.0 of lig)
@@ -36,7 +37,10 @@ set stick_radius, 0.18, pocket
 # Pocket surface (subtle)
 show surface, pocket
 set transparency, 0.80, pocket
-color gray90, pocket
+color gray75, pocket
+set two_sided_lighting, on
+set ambient_occlusion_mode, 2
+set ambient_occlusion_scale, 10
 
 # Hydrogen bonds
 dist hbonds, lig, pocket, 3.2
