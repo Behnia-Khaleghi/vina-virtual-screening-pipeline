@@ -8,9 +8,8 @@ set depth_cue, 0
 # Lighting
 set ambient, 0.35
 set direct, 0.6
-set specular, 0.4
-set shininess, 50
-set reflect, 0.1
+set specular, 0.25
+set shininess, 20
 set ray_shadows, 1
 set antialias, 2
 
@@ -36,19 +35,21 @@ set stick_radius, 0.18, pocket
 
 # Pocket surface (subtle)
 show surface, pocket
-set transparency, 0.65, pocket
-color lightblue, pocket
+set transparency, 0.80, pocket
+color gray90, pocket
 
 # Hydrogen bonds
 dist hbonds, lig, pocket, 3.2
-set dash_color, black
-set dash_width, 2
+set dash_color, gray40
+set dash_width, 1.5
 hide labels, hbonds
 
 # Clean framing
 hide cartoon, rec and not pocket
 center lig
 orient lig
+turn y, 10
+turn x, -5
 zoom lig, 6
 clip slab, 14
 
