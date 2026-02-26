@@ -23,12 +23,13 @@ select pocket, byres (rec within 4.0 of lig)
 show sticks, pocket
 color marine, pocket
 
-# Nice view
-zoom lig, 12
+# Nice view (better framing)
 orient lig
+zoom pocket, 6
+set depth_cue, 0
 
 # Render high resolution
-ray 2400,1800
+ray 2200,1600
 png 04_analysis/F_pos006_binding.png, dpi=300
 
 quit
